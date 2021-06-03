@@ -1,0 +1,296 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+$primary: #223A47;
+$secondary: #F27257;
+
+$xl: 1440px;
+$lg: 992px;
+$md: 768px;
+$sm: 0;
+
+
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+
+.mobile-logo-holder {
+    text-align: center;
+    display: none;
+    margin-bottom: 15px;
+
+    @media(max-width: $md) {
+        display: block;
+    }
+
+    img {
+        width: 66%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        @media(max-width: $sm) {
+            width: 100%;
+        }
+    }
+}
+
+.register-button {
+    font-family: 'Fredericka the Great';
+    font-size: 38px;
+    border: 1px dotted $secondary;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    border-radius: 0.125em;
+    transition: 0.25s ease all;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        background: $secondary;
+        color: white;
+    }
+
+    @media(max-width:$lg) {
+        text-size: 17px;
+        text-align: center;
+    }
+
+    @media(max-width:$md) {
+        display: none;
+
+        &.mobile {
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
+
+#wrapper-navbar {
+    @media(max-width:$lg) {
+        margin-bottom: 0px;
+    }
+
+    .top-header-holder {
+        height: 260px;
+        //background: white;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        @media(max-width:$lg) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            height: auto;
+        }
+
+        @media(max-width:$md) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+            .col- {
+                display: none;
+            }
+
+            .col-4 {
+                display: none;
+            }
+
+            .contact-holder {
+                text-align: left;
+            }
+        }
+
+        .navbar-toggler {
+            display: none;
+            padding: 1em;
+
+            @media(max-width:$lg) {
+                display: block;
+
+                &.md-view {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                background: rgba(#5DA0AA, 0.25);
+            }
+
+            .bar {
+                height: 4px;
+                border-radius: 4px;
+                background: rgba(#5DA0AA, 0.5);
+                margin-bottom: 6px;
+                width: 2.5em;
+            }
+
+            .menu-title {
+                font-size: 14px;
+                margin-top: 1em;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+
+            @media(max-width:$md) {
+                display: none;
+
+                &.md-view {
+                    display: flex;
+                    padding: 0.5em;
+                    padding-bottom: 0.5em;
+                    align-items: center;
+                    margin: -0.5em;
+
+                    .menu-title {
+                        margin-top: 0px;
+                        margin-right: 0.5em;
+                        font-size: 18px;
+                    }
+
+                    .bar {
+                        height: 3px;
+                        border-radius: 3px;
+                        background: rgba(#5DA0AA, 0.5);
+                        margin-bottom: 2px;
+                        width: 1em;
+                    }
+                }
+            }
+        }
+
+        .col- {
+            @media(max-width:$lg) {
+                margin-left: auto;
+            }
+        }
+
+        .container {
+            .logo-holder {
+                display: block;
+                width: 275px;
+
+                @media(max-width:$lg) {
+                    width: 150px;
+                }
+
+                @media(max-width:$md) {
+                    display: none;
+                }
+            }
+
+            .col-6 {
+                @media(max-width:$lg) {
+                    text-align: center;
+                }
+            }
+
+            .contact-holder {
+                font-size: 18px;
+                font-weight: 600;
+
+                @media(max-width:$md) {
+                    display: flex;
+                    justify-content: space-between;
+
+                    a {
+                        font-size: 18px;
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    margin-right: 1em;
+                    margin-bottom: 1em;
+                    color: $primary;
+
+                    .fa {
+                        color: $secondary;
+                    }
+                }
+
+                @media(max-width:$lg) {
+                    font-size: 16px;
+                }
+            }
+
+            .social-media-holder,
+            .social-media-holder-tablet {
+                font-size: 60px;
+
+                a {
+                    color: $secondary;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: darken($secondary, 15%);
+                    }
+                }
+
+                @media(max-width:$lg) {
+                    display: none;
+                }
+
+                &.social-media-holder-tablet {
+                    display: none;
+
+                    @media(max-width:$lg) {
+                        display: inline-block;
+                        font-size: 18px;
+                    }
+
+                    @media(max-width:$md) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    #main-nav {
+        //border-top: 1px solid rgba(#5DA0AA, 0.5);
+        border-bottom: 1px solid rgba(#5DA0AA, 0.5);
+        //padding: 25px;
+
+        @media(max-width:$md) {
+            border-top: 0px;
+        }
+
+        ul {
+            flex: 1;
+            justify-content: space-between;
+
+            li {
+                a {
+                    font-weight: 600;
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    padding: 1em 0.5em;
+
+                    @media(max-width:$xl) {
+                        font-size: 20px;
+                        padding: 0.7em 0.25em;
+                    }
+                }
+
+                &.current_page_item {
+                    a {
+                        color: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-banner {
+    height: 1080px;
+    //background: white;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    background-position: top center;
+
+    @media(max-width:$lg) {
+        background-position: top center;
+    }
+}
