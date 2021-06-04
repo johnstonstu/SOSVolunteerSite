@@ -15,8 +15,7 @@ get_header();
 ?>
 
 <div class="home-banner">
-
-
+        <h1>South Okanagan Similkameen Volunteer Centre</h1>
 </div>
 
 
